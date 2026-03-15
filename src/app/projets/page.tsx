@@ -12,7 +12,7 @@ export default function Projects() {
 
   const projectMeta = [
     { icon: <ShoppingCart className="h-5 w-5" />, techs: ["React", "TypeScript", "Express.js", "SQLite", "Stripe"], image: "/projet-site/page1.png", color: "from-violet-500/20 to-purple-500/20", href: "https://github.com/bilel-k/fitcorner" },
-    { icon: <Cpu className="h-5 w-5" />, techs: ["Docker", "MQTT", "InfluxDB", "Grafana", "Node-RED", "Node.js", "Python", "OPA"], image: "/projet-iot.png", color: "from-blue-500/20 to-cyan-500/20", href: "https://github.com/bilel-k/industritech" },
+    { icon: <Cpu className="h-5 w-5" />, techs: ["Docker", "MQTT", "InfluxDB", "Grafana", "Node-RED", "Three.js", "OPA/Rego", "Trivy", "OWASP ZAP"], image: "/projet-iot.png", color: "from-blue-500/20 to-cyan-500/20", href: "https://github.com/bilel-k/industritech" },
     { icon: <Terminal className="h-5 w-5" />, techs: ["Proxmox", "Virtualisation", "HA", "Infrastructure"], image: "/diagram-proxmox.webp", color: "from-emerald-500/20 to-green-500/20", href: "https://github.com/bilel-k/proxmox" },
     { icon: <Shield className="h-5 w-5" />, techs: ["OPNsense", "Wazuh", "Nessus", "OpenVPN", "Fail2Ban"], image: "/diagram-cybersecurity.webp", color: "from-red-500/20 to-orange-500/20", href: "https://github.com/bilel-k/audit-sec" },
   ]

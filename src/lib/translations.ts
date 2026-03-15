@@ -46,8 +46,8 @@ export const translations = {
           date: "JANVIER 2026",
         },
         {
-          title: "Plateforme IoT de Monitoring",
-          description: "Plateforme IoT complète et production-ready pour la collecte, le traitement et la visualisation de données de capteurs en temps réel. Architecture conteneurisée Docker Compose avec MQTT (Mosquitto), InfluxDB, Grafana, Node-RED, Node.js/Express, simulateur Python et politiques de sécurité OPA (Rego).",
+          title: "Plateforme IoT de Supervision Industrielle",
+          description: "Simulation d'une usine connectée : 14 machines, 43 capteurs, 3 zones de production. Stack Docker multi-services (Mosquitto, InfluxDB, Grafana, Node-RED, Express.js) avec visualisation 3D temps réel en Three.js. Pipeline DevSecOps GitHub Actions en 7 étapes : Lint, SAST, SCA, Secrets, Image Scan, DAST, Policy Gate — conteneurs durcis non-root, Semgrep, Bandit, Trivy, OWASP ZAP et policy-as-code OPA/Rego.",
           date: "MARS 2026",
         },
         {
@@ -295,8 +295,8 @@ export const translations = {
           date: "JANUARY 2026",
         },
         {
-          title: "IoT Monitoring Platform",
-          description: "Complete production-ready IoT platform for real-time sensor data collection, processing and visualization. Containerized Docker Compose architecture with MQTT (Mosquitto), InfluxDB, Grafana, Node-RED, Node.js/Express, Python sensor simulator and OPA (Rego) security policies.",
+          title: "Industrial IoT Supervision Platform",
+          description: "Simulation of a connected factory: 14 machines, 43 sensors, 3 production zones. Multi-service Docker stack (Mosquitto, InfluxDB, Grafana, Node-RED, Express.js) with real-time 3D visualization in Three.js. 7-stage DevSecOps CI/CD pipeline: Lint, SAST, SCA, Secrets, Image Scan, DAST, Policy Gate — hardened non-root containers, Semgrep, Bandit, Trivy, OWASP ZAP and OPA/Rego policy-as-code.",
           date: "MARCH 2026",
         },
         {
