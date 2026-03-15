@@ -69,7 +69,7 @@ body {
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: hsl(var(--border) / 0.4);
   }
 }
 
@@ -107,7 +107,7 @@ body {
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 2%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -139,7 +139,7 @@ body {
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-none;
   }
   body {
     @apply bg-background text-foreground;
@@ -237,17 +237,25 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid hsl(var(--border) / 0.4);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  transform: translateZ(0);
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+/* Fluid card hover — expo-out easing, GPU-accelerated */
+.card-hover {
+  will-change: transform, box-shadow;
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-@keyframes magic-spin {
-  0% { --angle: 0deg; }
-  100% { --angle: 360deg; }
+.card-hover:hover {
+  transform: translateY(-6px) translateZ(0);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.28);
+}
+/* Faster release on mouse-out */
+.card-hover:not(:hover) {
+  transition:
+    transform 200ms cubic-bezier(0.55, 0, 1, 0.45),
+    box-shadow 200ms cubic-bezier(0.55, 0, 1, 0.45);
 }
 
 @keyframes radar-sweep {
@@ -266,24 +274,6 @@ body {
   100% { r: 60; opacity: 0; stroke-width: 0.5; }
 }
 
-.magic-border {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  padding: 2px;
-  background: conic-gradient(from var(--angle), transparent 0%, transparent 60%, hsl(var(--primary)) 80%, hsl(var(--primary)) 100%);
-  animation: magic-spin 3s linear infinite;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.group:hover .magic-border {
-  opacity: 1;
-}
 
 /* Reduced motion — disable all heavy animations */
 @media (prefers-reduced-motion: reduce) {
@@ -304,18 +294,5 @@ body {
   .glass-panel {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-  }
-}
-
-/* Touch devices: disable hover-only GPU animations */
-@media (pointer: coarse) {
-  /* MagicCard conic-gradient spin — invisible on touch anyway */
-  .group .animate-\[spin_3s_linear_infinite\] {
-    animation: none !important;
-  }
-  /* Decorative spinning rings */
-  .animate-\[spin_60s_linear_infinite\],
-  .animate-\[spin_40s_linear_infinite_reverse\] {
-    animation: none !important;
   }
 }

@@ -15,16 +15,16 @@ export const translations = {
       available: "Disponible pour des opportunités",
       subtitle: "Étudiant en Informatique",
       followMe: "Me suivre",
-      roles: ["Cybersécurité", "Développement Web", "Réseaux & Systèmes", "Infrastructure Cloud"],
+      roles: ["Cybersécurité", "DevSecOps", "Développement Web", "Infrastructure & Réseaux"],
       stats: [
         { value: "4+", label: "Projets réalisés" },
-        { value: "3", label: "Certifications" },
+        { value: "4", label: "Certifications" },
         { value: "15+", label: "Technologies maîtrisées" },
       ],
     },
     about: {
       title: "Qui suis-je",
-      bio: "Passionné par la <strong>cybersécurité</strong> et le <strong>développement web</strong> — je conçois des systèmes sécurisés et des applications modernes.",
+      bio: "Passionné par la <strong>cybersécurité</strong> et le <strong>DevSecOps</strong> — je conçois des systèmes sécurisés, des pipelines CI/CD hardened et des infrastructures résilientes.",
       infoCards: [
         { label: "Formation", value: "Bachelor Informatique", sub: "Geneva Institute of Technology" },
         { label: "Poste", value: "Consultant IT", sub: "SATOM" },
@@ -46,9 +46,9 @@ export const translations = {
           date: "JANVIER 2026",
         },
         {
-          title: "Système de Backup",
-          description: "Solution d'entreprise respectant la règle 3-2-1 : sauvegardes incrémentielles, restauration granulaire automatisée, rotation des points de récupération et alertes par e-mail.",
-          date: "SEPTEMBRE 2025",
+          title: "Plateforme IoT de Monitoring",
+          description: "Plateforme IoT complète et production-ready pour la collecte, le traitement et la visualisation de données de capteurs en temps réel. Architecture conteneurisée Docker Compose avec MQTT (Mosquitto), InfluxDB, Grafana, Node-RED, Node.js/Express, simulateur Python et politiques de sécurité OPA (Rego).",
+          date: "MARS 2026",
         },
         {
           title: "Plateforme de virtualisation",
@@ -117,6 +117,11 @@ export const translations = {
       pdfViewer: "Visualisation du certificat",
       items: [
         {
+          title: "DevOps Foundations: DevSecOps",
+          date: "Mar. 2026",
+          expires: null,
+        },
+        {
           title: "Fortinet Certified Fundamentals in Cybersecurity",
           date: "Fév. 2026",
           expires: "Fév. 2028",
@@ -148,23 +153,23 @@ export const translations = {
           timeframe: "Court terme",
         },
         {
-          title: "Se spécialiser en tests d'intrusion",
-          description: "Maîtriser les techniques de pentest, d'exploitation et de post-exploitation pour intervenir sur des missions red team réelles.",
+          title: "Intégrer la sécurité dans des pipelines CI/CD réels",
+          description: "Implémenter des pratiques DevSecOps concrètes : SAST, DAST, scan de dépendances et policy-as-code (OPA/Rego) dans des workflows GitHub Actions ou GitLab CI.",
           timeframe: "Court terme",
         },
         {
-          title: "Évoluer vers un poste d'ingénieur sécurité",
-          description: "Intégrer une équipe SOC, CSIRT ou sécurité offensive dans une entreprise technologique internationale à l'issue de mon Bachelor.",
+          title: "Évoluer vers un rôle d'ingénieur DevSecOps ou sécurité offensive",
+          description: "Intégrer une équipe DevSecOps, SOC ou red team dans une entreprise technologique internationale, en combinant expertise offensive et automatisation de la sécurité.",
           timeframe: "Moyen terme",
         },
         {
-          title: "Obtenir un Master en sécurité informatique",
-          description: "Approfondir mes connaissances en gouvernance SSI, cryptographie appliquée et gestion des risques au niveau d'un Master spécialisé.",
+          title: "Obtenir un Master en cybersécurité ou DevSecOps",
+          description: "Approfondir mes connaissances en gouvernance SSI, cryptographie appliquée, sécurité des architectures cloud et gestion des risques au niveau d'un Master spécialisé.",
           timeframe: "Long terme",
         },
         {
-          title: "Créer des outils open‑source en sécurité",
-          description: "Développer et publier des outils accessibles qui renforcent la posture de sécurité des organisations, et partager mes connaissances avec la communauté.",
+          title: "Créer des outils open‑source en sécurité automatisée",
+          description: "Développer et publier des outils qui automatisent l'audit, le hardening et la détection de vulnérabilités, et partager ces ressources avec la communauté.",
           timeframe: "Long terme",
         },
       ],
@@ -229,7 +234,7 @@ export const translations = {
       radarLabels: ["Suisse Romande", "Frontalier FR", "Remote (Monde entier)"],
     },
     footer: {
-      bio: "Étudiant en informatique passionné par la cybersécurité et l'administration des systèmes. En route vers l'expertise et la sécurisation des infrastructures de demain.",
+      bio: "Passionné par la <strong>cybersécurité</strong> & le <strong>DevSecOps</strong> — je conçois des systèmes sécurisés, des pipelines CI/CD hardened et des infrastructures résilientes.",
       navTitle: "Navigation",
       socialTitle: "Réseaux",
       stackTitle: "Stack",
@@ -259,16 +264,16 @@ export const translations = {
       available: "Available for opportunities",
       subtitle: "Computer Science Student",
       followMe: "Follow me",
-      roles: ["Cybersecurity", "Web Development", "Networks & Systems", "Cloud Infrastructure"],
+      roles: ["Cybersecurity", "DevSecOps", "Web Development", "Infrastructure & Networks"],
       stats: [
         { value: "4+", label: "Completed projects" },
-        { value: "3", label: "Certifications" },
+        { value: "4", label: "Certifications" },
         { value: "15+", label: "Technologies mastered" },
       ],
     },
     about: {
       title: "Who am I",
-      bio: "Passionate about <strong>cybersecurity</strong> and <strong>web development</strong> — I design secure systems and modern applications.",
+      bio: "Passionate about <strong>cybersecurity</strong> and <strong>DevSecOps</strong> — I design secure systems, hardened CI/CD pipelines and resilient infrastructures.",
       infoCards: [
         { label: "Education", value: "Bachelor in CS", sub: "Geneva Institute of Technology" },
         { label: "Position", value: "IT Consultant", sub: "SATOM" },
@@ -290,9 +295,9 @@ export const translations = {
           date: "JANUARY 2026",
         },
         {
-          title: "Backup System",
-          description: "Enterprise solution following the 3-2-1 rule: incremental backups, automated granular restore, recovery point rotation and email alerts.",
-          date: "SEPTEMBER 2025",
+          title: "IoT Monitoring Platform",
+          description: "Complete production-ready IoT platform for real-time sensor data collection, processing and visualization. Containerized Docker Compose architecture with MQTT (Mosquitto), InfluxDB, Grafana, Node-RED, Node.js/Express, Python sensor simulator and OPA (Rego) security policies.",
+          date: "MARCH 2026",
         },
         {
           title: "Virtualization Platform",
@@ -361,6 +366,11 @@ export const translations = {
       pdfViewer: "Certificate viewer",
       items: [
         {
+          title: "DevOps Foundations: DevSecOps",
+          date: "Mar. 2026",
+          expires: null,
+        },
+        {
           title: "Fortinet Certified Fundamentals in Cybersecurity",
           date: "Feb. 2026",
           expires: "Feb. 2028",
@@ -392,23 +402,23 @@ export const translations = {
           timeframe: "Court terme",
         },
         {
-          title: "Specialize in penetration testing",
-          description: "Master pentest, exploitation and post-exploitation techniques to work on real red team missions.",
+          title: "Embed security into real CI/CD pipelines",
+          description: "Implement concrete DevSecOps practices: SAST, DAST, dependency scanning and policy-as-code (OPA/Rego) in GitHub Actions or GitLab CI workflows.",
           timeframe: "Court terme",
         },
         {
-          title: "Move into a security engineer role",
-          description: "Join a SOC, CSIRT or offensive security team at an international technology company upon completing my Bachelor's degree.",
+          title: "Move into a DevSecOps or offensive security engineer role",
+          description: "Join a DevSecOps, SOC or red team at an international technology company, combining offensive expertise with security automation.",
           timeframe: "Moyen terme",
         },
         {
-          title: "Obtain a Master's in information security",
-          description: "Deepen my knowledge in ISS governance, applied cryptography and risk management at a specialized Master's level.",
+          title: "Obtain a Master's in cybersecurity or DevSecOps",
+          description: "Deepen my knowledge in ISS governance, applied cryptography, cloud security architecture and risk management at a specialized Master's level.",
           timeframe: "Long terme",
         },
         {
-          title: "Create open-source security tools",
-          description: "Develop and publish accessible tools that strengthen the security posture of organizations, and share my knowledge with the community.",
+          title: "Build open-source automated security tools",
+          description: "Develop and publish tools that automate auditing, hardening and vulnerability detection, and share them with the security community.",
           timeframe: "Long terme",
         },
       ],
@@ -473,7 +483,7 @@ export const translations = {
       radarLabels: ["French Switzerland", "Cross-border FR", "Remote (Worldwide)"],
     },
     footer: {
-      bio: "Computer science student passionate about cybersecurity and systems administration. On the path to expertise and securing tomorrow's infrastructures.",
+      bio: "Passionate about <strong>cybersecurity</strong> & <strong>DevSecOps</strong> — I design secure systems, hardened CI/CD pipelines and resilient infrastructures.",
       navTitle: "Navigation",
       socialTitle: "Networks",
       stackTitle: "Stack",

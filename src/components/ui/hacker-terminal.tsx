@@ -19,7 +19,7 @@ const sequence: { command: string; output: Line[] }[] = [
     command: "cat profile.json",
     output: [
       { type: "output", text: "{" },
-      { type: "output", text: '  "role":     "Consultant IT & Étudiant",', color: "text-sky-300" },
+      { type: "output", text: '  "role":     "Cybersecurity & DevSecOps",' , color: "text-sky-300" },
       { type: "output", text: '  "school":   "Geneva Institute of Technology",', color: "text-sky-300" },
       { type: "output", text: '  "company":  "SATOM",', color: "text-sky-300" },
       { type: "output", text: '  "status":   "open_to_opportunities"', color: "text-emerald-400" },
@@ -44,17 +44,17 @@ const sequence: { command: string; output: Line[] }[] = [
     output: [
       {
         type: "output",
-        text: "cybersec/   devweb/   infra/   iac/",
+        text: "cybersec/   devsecops/   infra/   iac/",
         color: "text-sky-300",
       },
     ],
   },
   {
-    command: "cat skills/cybersec.txt",
+    command: "cat skills/devsecops.txt",
     output: [
+      { type: "output", text: "Docker · CI/CD · GitHub Actions · OPA (Rego)" },
+      { type: "output", text: "SAST · DAST · Trivy · Snyk · OWASP ZAP" },
       { type: "output", text: "OPNsense · Wazuh · Nessus · Burp Suite" },
-      { type: "output", text: "Metasploit · PowerShell Empire · Wireshark" },
-      { type: "output", text: "OpenVPN · Analyse de vulnérabilités" },
     ],
   },
   {

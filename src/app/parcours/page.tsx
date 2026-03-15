@@ -57,8 +57,7 @@ export default function Experience() {
                   <div className="h-2 w-2 rounded-full bg-primary" />
                 </div>
                 
-                <div className="glass-panel p-6 md:p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="glass-panel p-6 md:p-8 rounded-[2rem] shadow-sm card-hover hover:shadow-xl relative overflow-hidden group">
                   <div className="relative z-10 flex items-start gap-4 mb-4">
                     <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white/10 shrink-0 border border-border/50">
                       <Image 
@@ -103,8 +102,7 @@ export default function Experience() {
                   <div className="h-2 w-2 rounded-full bg-primary" />
                 </div>
 
-                <div className="glass-panel p-6 md:p-8 rounded-[2rem] hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="glass-panel p-6 md:p-8 rounded-[2rem] card-hover hover:shadow-xl relative overflow-hidden group">
                   <div className="relative z-10 flex items-start gap-4 mb-4">
                     <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white/10 shrink-0 border border-border/50 p-1">
                       <Image 

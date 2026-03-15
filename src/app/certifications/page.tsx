@@ -13,6 +13,7 @@ export default function Certifications() {
   const { t } = useLanguage()
 
   const certMeta = [
+    { issuer: "LINKEDIN LEARNING",           id: "4cd3c7ea427f4188e01a8789fd5542b67bfcbd07f55733ba648bb11489c0d115", image: "/certificats/linkedin.png", pdf: "/certificats/CertificatDaccomplissement_DevOps Foundations DevSecOps (1).pdf" },
     { issuer: "FORTINET",                   id: "7185383506BK", image: "/certificats/fund-cybersecurity.png",          pdf: "/certificats/Fortinet Certified Fundamentals in Cybersecurity.pdf" },
     { issuer: "CISCO NETWORKING ACADEMY",   id: "—",           image: "/certificats/hackerethic.png",                 pdf: "/certificats/Ethical_Hacker_certificate_bilel-kaoulala-satom-ch_c781f950-f995-492a-b2d0-793206c67e16.pdf" },
     { issuer: "CISCO NETWORKING ACADEMY",   id: "—",           image: "/certificats/introduction_to_cybersecurity.png",pdf: "/certificats/Introduction_to_Cybersecurity_certificate_bilel-kaoulala-satom-ch_08e1f6c8-451f-4a1c-b482-b4792d898678.pdf" },
@@ -31,7 +32,7 @@ export default function Certifications() {
   }
 
   return (
-    <div className="container mx-auto px-6 py-20 max-w-[1440px] relative overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 max-w-[1440px] relative overflow-hidden">
       <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[120px] pointer-events-none" />
       
       <motion.div 
@@ -50,7 +51,7 @@ export default function Certifications() {
            <motion.div variants={itemAnim} key={index}>
             <SpotlightCard
               onClick={() => setSelectedPdf(cert.pdf)}
-              className="w-full text-left group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 md:items-center border rounded-[2rem] glass-panel hover:shadow-2xl hover:border-primary/40 transition-all duration-500 relative overflow-hidden cursor-pointer"
+              className="w-full text-left group flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-8 md:items-center border rounded-[2rem] glass-panel card-hover hover:shadow-2xl relative overflow-hidden cursor-pointer"
             >
               
               <div className="relative h-24 w-24 sm:h-28 sm:w-28 rounded-xl flex-shrink-0 overflow-hidden group-hover:scale-105 transition-transform duration-500">

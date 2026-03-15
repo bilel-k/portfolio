@@ -46,8 +46,8 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
   const suffix = value.replace(/[0-9]/g, "")
   const { count, ref } = useCountUp(numeric)
   return (
-      <div ref={ref} className="relative h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8 rounded-3xl glass-panel hover:border-primary/30 hover:bg-primary/[0.02] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] group overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div ref={ref} className="relative h-full flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8 rounded-3xl glass-panel card-hover hover:shadow-[0_20px_48px_-12px_rgba(0,0,0,0.28)] group overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-transparent opacity-0" />
       <div className="relative z-10 text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary mb-1 sm:mb-2 tracking-tight drop-shadow-sm">
         {count}{suffix}
       </div>
@@ -157,10 +157,10 @@ export default function Home() {
             animate="visible"
           >
             <motion.div variants={itemVariants}>
-              <div className="inline-flex items-center gap-2.5 glass-panel text-primary px-5 py-2 rounded-full text-sm font-semibold border border-primary/20 shadow-[0_0_20px_rgba(var(--primary),0.1)]">
+              <div className="inline-flex items-center gap-2.5 glass-panel text-primary px-5 py-2 rounded-full text-sm font-semibold border border-border/40">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary shadow-[0_0_10px_rgba(var(--primary),0.8)]"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
                 </span>
                 {t.hero.available}
               </div>
@@ -168,8 +168,7 @@ export default function Home() {
 
             {/* Mobile-only profile photo — same card style as desktop */}
             <motion.div variants={itemVariants} className="flex justify-center lg:hidden">
-              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-[2rem] glass-panel border border-primary/20 shadow-2xl shadow-primary/20 flex items-center justify-center p-2 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 rounded-[2rem]" />
+              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-[2rem] glass-panel border border-border/30 shadow-2xl flex items-center justify-center p-2 group">
                 <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-card/80 border border-border/50">
                   <Image src="/profile.png" alt="Bilel Kaoulala" fill className="object-cover" sizes="(max-width: 640px) 176px, 208px" />
                 </div>
@@ -218,12 +217,12 @@ export default function Home() {
               </h1>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4">
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-4">
               <span className="text-base text-muted-foreground font-medium">{t.hero.followMe}</span>
               <div className="h-px w-8 bg-border" />
               <div className="flex gap-3">
                 {[
-                  { Icon: Github, href: "https://github.com/biIeI", label: "GitHub" },
+                  { Icon: Github, href: "https://github.com/bilel-k", label: "GitHub" },
                   { Icon: Linkedin, href: "https://linkedin.com/in/bilel-kaoulala", label: "LinkedIn" },
                   { Icon: Mail, href: "mailto:bilel@mail.com", label: "Email" },
                 ].map(({ Icon, href, label }, i) => (
@@ -254,13 +253,9 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.215, 0.61, 0.355, 1.0], delay: 0.2 }}
           >
-            {/* Decorative rings */}
-            <div className="absolute w-[440px] h-[440px] border border-primary/20 rounded-full animate-[spin_60s_linear_infinite] border-dashed" />
-            <div className="absolute w-[340px] h-[340px] border border-primary/10 rounded-full animate-[spin_40s_linear_infinite_reverse]" />
-
             {/* Main card */}
-            <div className="relative w-80 h-80 rounded-[3rem] glass-panel border border-primary/20 shadow-2xl shadow-primary/20 flex items-center justify-center p-2 group hover:scale-[1.02] transition-transform duration-500">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 rounded-[3rem]" />
+            <div className="relative w-80 h-80 rounded-[3rem] glass-panel border border-border/30 shadow-2xl flex items-center justify-center p-2 group hover:scale-[1.02] transition-transform duration-500">
+
               <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden bg-card/80 backdrop-blur-md border border-border/50">
                 <Image src="/profile.png" alt="Bilel Kaoulala" fill className="object-cover scale-[1.02] group-hover:scale-105 transition-transform duration-700" priority sizes="320px" />
               </div>
@@ -270,28 +265,28 @@ export default function Home() {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <Shield className="h-6 w-6 text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]" />
+                <Shield className="h-6 w-6 text-primary" />
               </motion.div>
               <motion.div
                 className="absolute -bottom-4 -left-4 p-3.5 rounded-2xl glass-panel shadow-xl shadow-black/5"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >
-                <Code2 className="h-6 w-6 text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]" />
+                <Code2 className="h-6 w-6 text-primary" />
               </motion.div>
               <motion.div
                 className="absolute top-1/2 -right-8 p-3 rounded-xl glass-panel shadow-xl shadow-black/5"
                 animate={{ x: [0, 8, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               >
-                <Sparkles className="h-5 w-5 text-primary drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]" />
+                <Sparkles className="h-5 w-5 text-primary" />
               </motion.div>
             </div>
           </motion.div>
         </div>
 
         {/* Stats bar */}
-        <div className="mt-4 grid grid-cols-3 gap-3 sm:gap-6 max-w-3xl mx-auto items-stretch">
+        <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-6 max-w-3xl mx-auto items-stretch">
           {stats.map((stat, i) => (
             <motion.div
               key={i}

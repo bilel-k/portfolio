@@ -6,7 +6,6 @@ import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/components/language-provider";
 import { LanguageTransition } from "@/components/language-transition";
-import { AnimatedBackground } from "@/components/ui/animated-background";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { ScrollProgress, BackToTop } from "@/components/ui/scroll-ui";
 
@@ -25,23 +24,23 @@ const jsonLd = {
   name: "Bilel Kaoulala",
   url: siteUrl,
   image: `${siteUrl}/profile.png`,
-  jobTitle: "Étudiant en Informatique — Cybersécurité & Développement Web",
-  description: "Portfolio de Bilel Kaoulala — Étudiant en Informatique spécialisé en Cybersécurité et développement de systèmes d'information.",
+  jobTitle: "Étudiant en Informatique — Cybersécurité & DevSecOps",
+  description: "Portfolio de Bilel Kaoulala — Étudiant en Informatique passionné par la Cybersécurité et le DevSecOps.",
   sameAs: [
-    "https://github.com/biIeI",
+    "https://github.com/bilel-k",
     "https://linkedin.com/in/bilel-kaoulala",
   ],
-  knowsAbout: ["Cybersécurité", "Développement Web", "Réseaux", "Systèmes", "Cloud", "Next.js", "React", "TypeScript"],
+  knowsAbout: ["Cybersécurité", "DevSecOps", "Pentest", "Développement Web", "Réseaux", "Systèmes", "Cloud", "Next.js", "React", "TypeScript"],
 }
 
 export const metadata: Metadata = {
-  title: "Bilel Kaoulala | Cybersécurité & Développement Web",
-  description: "Portfolio de Bilel Kaoulala — Étudiant en Informatique spécialisé en Cybersécurité et développement de systèmes d'information. Découvrez mes projets, certifications et parcours.",
-  keywords: ["Bilel Kaoulala", "Portfolio", "Cybersécurité", "Développement Web", "Next.js", "React", "TypeScript", "Systèmes d'information", "Informatique", "Web Developer", "Cybersecurity"],
+  title: "Bilel Kaoulala | Cybersécurité & DevSecOps",
+  description: "Portfolio de Bilel Kaoulala — Étudiant en Informatique passionné par la Cybersécurité et le DevSecOps. Découvrez mes projets, certifications et parcours.",
+  keywords: ["Bilel Kaoulala", "Portfolio", "Cybersécurité", "DevSecOps", "Pentest", "Développement Web", "Next.js", "React", "TypeScript", "Systèmes d'information", "Informatique", "Web Developer", "Cybersecurity"],
   metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Bilel Kaoulala | Portfolio",
-    description: "Étudiant en Informatique spécialisé en Cybersécurité et développement moderne.",
+    description: "Étudiant en Informatique passionné par la Cybersécurité & DevSecOps.",
     url: siteUrl,
     siteName: "Portfolio Bilel Kaoulala",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Bilel Kaoulala Portfolio" }],
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bilel Kaoulala | Portfolio",
-    description: "Étudiant en Informatique spécialisé en Cybersécurité.",
+    description: "Étudiant en Informatique passionné par la Cybersécurité & DevSecOps.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -106,7 +105,6 @@ export default function RootLayout({
           <CustomCursor />
           <ScrollProgress />
           <BackToTop />
-          <AnimatedBackground />
           <Navbar />
           <main className="flex-1 w-full pt-[4.25rem] flex flex-col">
             <LanguageTransition>{children}</LanguageTransition>

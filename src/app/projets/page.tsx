@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Terminal, Shield, Server, ShoppingCart, ExternalLink } from "lucide-react"
+import { Terminal, Shield, Cpu, ShoppingCart, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { SpotlightCard } from "@/components/ui/spotlight-card"
 import { ScrambleText } from "@/components/ui/scramble-text"
@@ -11,10 +11,10 @@ export default function Projects() {
   const { t } = useLanguage()
 
   const projectMeta = [
-    { icon: <ShoppingCart className="h-5 w-5" />, techs: ["React", "TypeScript", "Express.js", "SQLite", "Stripe"], image: "/projet-site/page1.png", color: "from-violet-500/20 to-purple-500/20" },
-    { icon: <Server className="h-5 w-5" />, techs: ["Veeam", "Acronis", "Backup", "Infrastructure"], image: "/diagram-backup.webp", color: "from-blue-500/20 to-cyan-500/20" },
-    { icon: <Terminal className="h-5 w-5" />, techs: ["Proxmox", "Virtualisation", "HA", "Infrastructure"], image: "/diagram-proxmox.webp", color: "from-emerald-500/20 to-green-500/20" },
-    { icon: <Shield className="h-5 w-5" />, techs: ["OPNsense", "Wazuh", "Nessus", "OpenVPN", "Fail2Ban"], image: "/diagram-cybersecurity.webp", color: "from-red-500/20 to-orange-500/20" },
+    { icon: <ShoppingCart className="h-5 w-5" />, techs: ["React", "TypeScript", "Express.js", "SQLite", "Stripe"], image: "/projet-site/page1.png", color: "from-violet-500/20 to-purple-500/20", href: "https://github.com/bilel-k/fitcorner" },
+    { icon: <Cpu className="h-5 w-5" />, techs: ["Docker", "MQTT", "InfluxDB", "Grafana", "Node-RED", "Node.js", "Python", "OPA"], image: "/projet-iot.png", color: "from-blue-500/20 to-cyan-500/20", href: "https://github.com/bilel-k/industritech" },
+    { icon: <Terminal className="h-5 w-5" />, techs: ["Proxmox", "Virtualisation", "HA", "Infrastructure"], image: "/diagram-proxmox.webp", color: "from-emerald-500/20 to-green-500/20", href: "https://github.com/bilel-k/proxmox" },
+    { icon: <Shield className="h-5 w-5" />, techs: ["OPNsense", "Wazuh", "Nessus", "OpenVPN", "Fail2Ban"], image: "/diagram-cybersecurity.webp", color: "from-red-500/20 to-orange-500/20", href: "https://github.com/bilel-k/audit-sec" },
   ]
 
   const projects = t.projects.items.map((item, i) => ({ ...item, ...projectMeta[i] }))
@@ -33,7 +33,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="container mx-auto px-6 py-20 max-w-[1440px] relative overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 max-w-[1440px] relative overflow-hidden">
       <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       
       <motion.div 
@@ -56,7 +56,10 @@ export default function Projects() {
       >
         {projects.map((project, index) => (
           <motion.div variants={item} key={index} className="flex">
-            <SpotlightCard className="group relative flex flex-col w-full glass-panel rounded-[2rem] overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 hover:border-primary/40 transition-all duration-500">
+            <SpotlightCard
+              className="group relative flex flex-col w-full glass-panel rounded-[2rem] overflow-hidden card-hover hover:shadow-2xl"
+              onClick={project.href ? () => window.open(project.href, "_blank", "noopener,noreferrer") : undefined}
+            >
               
               {/* Image banner */}
               <div className="relative h-44 sm:h-56 w-full overflow-hidden border-b bg-muted/50">
@@ -91,7 +94,7 @@ export default function Projects() {
                 <div className="relative z-10 mt-auto">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.techs.map((tech) => (
-                      <span key={tech} className="px-3 py-1.5 bg-secondary/80 text-secondary-foreground text-xs font-semibold rounded-full border border-border/50 group-hover:border-primary/20 transition-colors">
+                      <span key={tech} className="px-3 py-1.5 bg-secondary/80 text-secondary-foreground text-xs font-semibold rounded-full border border-border/50 transition-colors">
                         {tech}
                       </span>
                     ))}

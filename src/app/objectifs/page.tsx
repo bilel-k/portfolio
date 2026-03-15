@@ -54,7 +54,6 @@ export default function Goals() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.4, ease: "easeOut" }}
-                whileHover={{ y: -6 }}
                 className="relative flex flex-col group"
               >
                 {/* Step dot on timeline */}
@@ -78,7 +77,7 @@ export default function Goals() {
 
                 {/* Card */}
                 <div
-                  className="flex-1 glass-panel rounded-[1.5rem] p-6 border transition-all duration-300 relative overflow-hidden group-hover:shadow-xl"
+                  className="flex-1 glass-panel rounded-[1.5rem] p-6 border card-hover relative overflow-hidden group-hover:shadow-xl"
                   style={{
                     borderColor: `${cfg.accent}30`,
                     boxShadow: undefined,

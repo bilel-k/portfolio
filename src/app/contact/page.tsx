@@ -69,7 +69,7 @@ export default function Contact() {
 
   return (
     <>
-    <div className="container mx-auto px-6 py-20 max-w-[1440px] relative overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 max-w-[1440px] relative overflow-hidden">
       <div className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-primary/[0.03] rounded-full blur-[120px] pointer-events-none" />
       
       <motion.div 
@@ -90,8 +90,7 @@ export default function Contact() {
         className="grid md:grid-cols-3 gap-8"
       >
         <motion.div variants={itemParams} className="md:col-span-1 space-y-6">
-          <div className="glass-panel border rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/30 transition-all duration-500 relative overflow-hidden group">
-             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="glass-panel border rounded-[2rem] p-8 card-hover hover:shadow-xl relative overflow-hidden group">
              <h3 className="relative z-10 text-xl font-bold mb-6 flex items-center gap-2">
                {tc.coordTitle}
              </h3>
@@ -127,11 +126,10 @@ export default function Contact() {
           </div>
 
 
-          <div className="glass-panel border rounded-[2rem] p-8 hover:shadow-xl hover:border-primary/30 transition-all duration-500 relative overflow-hidden group">
-             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="glass-panel border rounded-[2rem] p-8 card-hover hover:shadow-xl relative overflow-hidden group">
              <h3 className="relative z-10 text-xl font-bold mb-6">{tc.socialTitle}</h3>
              <div className="relative z-10 flex gap-3">
-               <a href="https://github.com/biIeI" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/60 rounded-xl hover:bg-primary/[0.08] hover:text-primary transition-colors hover:scale-105 transform duration-200">
+               <a href="https://github.com/bilel-k" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/60 rounded-xl hover:bg-primary/[0.08] hover:text-primary transition-colors hover:scale-105 transform duration-200">
                  <Github className="h-5 w-5" />
                </a>
                <a href="https://linkedin.com/in/bilel-kaoulala" target="_blank" rel="noopener noreferrer" className="p-3 bg-muted/60 rounded-xl hover:bg-primary/[0.08] hover:text-primary transition-colors hover:scale-105 transform duration-200">
@@ -141,9 +139,8 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <motion.div variants={itemParams} className="md:col-span-2 glass-panel border rounded-[2rem] p-5 sm:p-8 md:p-12 relative overflow-hidden hover:border-primary/40 hover:shadow-2xl transition-all duration-500 group">
-          <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <motion.div variants={itemParams} className="md:col-span-2 glass-panel border rounded-[2rem] p-5 sm:p-8 md:p-12 relative overflow-hidden card-hover hover:shadow-2xl group">
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6 sm:mb-8 relative z-10 tracking-tight">{tc.formTitle} <span className="text-primary">.</span></h2>
           <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
             <div className="grid md:grid-cols-2 gap-6">

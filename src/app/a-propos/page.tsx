@@ -78,7 +78,7 @@ export default function About() {
   const cat = skills[activeSkillCat]
 
   return (
-    <div className="container mx-auto px-6 py-20 max-w-[1440px] relative overflow-hidden">
+    <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 max-w-[1440px] relative overflow-hidden">
       <div className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       
       <motion.div 
@@ -122,13 +122,9 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.12, duration: 0.5, ease: "easeOut" }}
-                  whileHover={{ y: -8, transition: { type: "spring", stiffness: 400, damping: 20 } }}
-                  className="group relative glass-panel rounded-3xl p-7 md:p-8 border border-border/30 hover:border-primary/30 transition-all duration-500 cursor-default overflow-hidden hover:shadow-2xl"
+                  className="group relative glass-panel rounded-3xl p-7 md:p-8 border border-border/30 card-hover cursor-default overflow-hidden hover:shadow-2xl"
                 >
-                  {/* Animated gradient sweep on hover */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  {/* Corner glow */}
-                  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-80 transition-opacity duration-700 pointer-events-none" />
+                  {/* Corner glow removed */}
 
                   <div className="relative z-10">
                     {/* Icon + status dot */}
@@ -142,7 +138,7 @@ export default function About() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
                           </span>
-                          {lang === "fr" ? "En poste" : "Active"}
+                          {"Freelance"}
                         </span>
                       )}
                     </div>
