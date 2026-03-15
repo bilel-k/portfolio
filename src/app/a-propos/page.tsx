@@ -58,6 +58,7 @@ export default function About() {
 
   const fallbackEmoji: Record<string, string> = {
     "C++": "C++", "SQL": "SQL", "QEMU": "VM",
+    "Trivy": "TVY", "OWASP ZAP": "ZAP", "Fail2Ban": "F2B",
   }
 
   const skillIcons: Record<string, ReactNode> = {
@@ -68,11 +69,11 @@ export default function About() {
   }
 
   const skills = [
-    { title: t.about.skillCategories[0], icon: <Code2 className="h-5 w-5" />,       accent: "#10b981", tw: { text: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/40", glow: "rgba(16,185,129,0.35)" },    items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "C++"] },
-    { title: t.about.skillCategories[1], icon: <Wrench className="h-5 w-5" />,      accent: "#f59e0b", tw: { text: "text-amber-400",   bg: "bg-amber-500/10",   border: "border-amber-500/40",   glow: "rgba(245,158,11,0.35)" },    items: ["React", "Next.js", "Node.js", "Express.js", "Git", "Docker", "WordPress", "Canva", "Microsoft 365"] },
+    { title: t.about.skillCategories[0], icon: <Code2 className="h-5 w-5" />,       accent: "#10b981", tw: { text: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/40", glow: "rgba(16,185,129,0.35)" },    items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS", "SQL", "C++", "Bash"] },
+    { title: t.about.skillCategories[1], icon: <Wrench className="h-5 w-5" />,      accent: "#f59e0b", tw: { text: "text-amber-400",   bg: "bg-amber-500/10",   border: "border-amber-500/40",   glow: "rgba(245,158,11,0.35)" },    items: ["React", "Next.js", "Node.js", "Express.js", "Git", "Docker", "Grafana", "InfluxDB", "Node-RED", "WordPress", "Canva", "Microsoft 365"] },
     { title: t.about.skillCategories[2], icon: <Network className="h-5 w-5" />,     accent: "#3b82f6", tw: { text: "text-blue-400",    bg: "bg-blue-500/10",    border: "border-blue-500/40",    glow: "rgba(59,130,246,0.35)" },    items: ["Linux", "Windows Server", "Cisco", "AWS", "Azure", "VMware", "Proxmox", "QEMU"] },
-    { title: t.about.skillCategories[3], icon: <Terminal className="h-5 w-5" />,    accent: "#06b6d4", tw: { text: "text-cyan-400",    bg: "bg-cyan-500/10",    border: "border-cyan-500/40",    glow: "rgba(6,182,212,0.35)" },     items: ["Ansible", "Terraform"] },
-    { title: t.about.skillCategories[4], icon: <ShieldCheck className="h-5 w-5" />, accent: "#ef4444", tw: { text: "text-red-400",     bg: "bg-red-500/10",     border: "border-red-500/40",     glow: "rgba(239,68,68,0.35)" },     items: ["OPNsense", "Wazuh", "Nessus", "Burp Suite", "Metasploit", "PowerShell Empire", "OpenVPN", "Wireshark"] },
+    { title: t.about.skillCategories[3], icon: <Terminal className="h-5 w-5" />,    accent: "#06b6d4", tw: { text: "text-cyan-400",    bg: "bg-cyan-500/10",    border: "border-cyan-500/40",    glow: "rgba(6,182,212,0.35)" },     items: ["Ansible", "Terraform", "GitHub Actions", "Kubernetes"] },
+    { title: t.about.skillCategories[4], icon: <ShieldCheck className="h-5 w-5" />, accent: "#ef4444", tw: { text: "text-red-400",     bg: "bg-red-500/10",     border: "border-red-500/40",     glow: "rgba(239,68,68,0.35)" },     items: ["OPNsense", "Wazuh", "Nessus", "Burp Suite", "Metasploit", "PowerShell Empire", "OpenVPN", "Wireshark", "Trivy", "Semgrep", "OWASP ZAP", "Fail2Ban"] },
     { title: t.about.skillCategories[5], icon: <HeartHandshake className="h-5 w-5" />, accent: "#8b5cf6", tw: { text: "text-violet-400", bg: "bg-violet-500/10", border: "border-violet-500/40",  glow: "rgba(139,92,246,0.35)" },   items: ["Communication", "Esprit d'équipe", "Rigueur", "Curiosité technique"] },
   ]
   const cat = skills[activeSkillCat]

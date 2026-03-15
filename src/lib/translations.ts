@@ -33,7 +33,7 @@ export const translations = {
       viewCV: "Voir mon CV",
       downloadCV: "Télécharger",
       cvTitle: "CV — Bilel Kaoulala",
-      skillCategories: ["Langages", "Frameworks", "Systèmes", "Infra as Code", "Cybersécurité", "Soft Skills"],
+      skillCategories: ["Langages", "Frameworks", "Systèmes", "IaC & CI/CD", "Cybersécurité", "Soft Skills"],
       softSkillNames: ["Communication", "Esprit d'équipe", "Rigueur", "Curiosité technique"],
     },
     projects: {
@@ -282,7 +282,7 @@ export const translations = {
       viewCV: "View my CV",
       downloadCV: "Download",
       cvTitle: "CV — Bilel Kaoulala",
-      skillCategories: ["Languages", "Frameworks", "Systems", "Infra as Code", "Cybersecurity", "Soft Skills"],
+      skillCategories: ["Languages", "Frameworks", "Systems", "IaC & CI/CD", "Cybersecurity", "Soft Skills"],
       softSkillNames: ["Communication", "Team spirit", "Rigor", "Technical curiosity"],
     },
     projects: {
