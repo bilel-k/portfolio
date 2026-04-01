@@ -21,6 +21,13 @@ export default function Goals() {
 
   const goals = t.goals.items.map((item, i) => ({ ...item, icon: goalIcons[i] }))
 
+  const sectionOrder = ["Court terme", "Moyen terme", "Long terme"] as const
+
+  const groupedGoals = sectionOrder.map((timeframe) => ({
+    timeframe,
+    goals: goals.filter((goal) => goal.timeframe === timeframe),
+  }))
+
   const timeframeConfig: Record<string, { color: string; accent: string; bg: string; border: string }> = {
     "Court terme":  { color: "text-emerald-400", accent: "#10b981", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
     "Moyen terme":  { color: "text-blue-400",    accent: "#3b82f6", bg: "bg-blue-500/10",    border: "border-blue-500/20"    },
@@ -43,77 +50,78 @@ export default function Goals() {
         </p>
       </motion.div>
 
-      {/* Horizontal connector line (desktop) */}
       <div className="relative z-10">
-        <div className="hidden lg:block absolute top-[52px] left-[5%] right-[5%] h-px bg-gradient-to-r from-transparent via-border/60 to-transparent pointer-events-none" />
+        <div className="grid gap-6 xl:grid-cols-3">
+          {groupedGoals.map((section, sectionIndex) => {
+            const cfg = timeframeConfig[section.timeframe]
+            const sectionLabel = t.goals.timeframes[section.timeframe]
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          {goals.map((goal, index) => {
-            const cfg = timeframeConfig[goal.timeframe]
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+              <motion.section
+                key={section.timeframe}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.4, ease: "easeOut" }}
-                className="relative flex flex-col group"
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ delay: sectionIndex * 0.12, duration: 0.45, ease: "easeOut" }}
+                className="glass-panel border border-border/50 rounded-[2rem] p-5 sm:p-6 md:p-7 relative overflow-hidden"
+                style={{ borderColor: `${cfg.accent}22` }}
               >
-                {/* Step dot on timeline */}
-                <div className="hidden lg:flex justify-center mb-6">
-                  <div
-                    className="w-[26px] h-[26px] rounded-full border-[3px] shrink-0 flex items-center justify-center transition-all duration-300 group-hover:scale-125"
-                    style={{ borderColor: cfg.accent, background: "var(--background)" }}
-                  >
-                    <div
-                      className="w-2 h-2 rounded-full transition-all duration-300 group-hover:scale-0"
-                      style={{ background: cfg.accent }}
-                    />
-                    <span
-                      className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                      style={{ color: cfg.accent }}
-                    >
-                      <Target className="w-3 h-3" />
-                    </span>
-                  </div>
-                </div>
-
-                {/* Card */}
                 <div
-                  className="flex-1 glass-panel rounded-[1.5rem] p-6 border card-hover relative overflow-hidden group-hover:shadow-xl"
-                  style={{
-                    borderColor: `${cfg.accent}30`,
-                    boxShadow: undefined,
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 8px 40px -12px ${cfg.accent}44`)}
-                  onMouseLeave={e => (e.currentTarget.style.boxShadow = "")}
-                >
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-[1.5rem]"
-                    style={{ background: `radial-gradient(ellipse at 30% 20%, ${cfg.accent}12 0%, transparent 70%)` }} />
+                  className="absolute inset-x-0 top-0 h-px opacity-80"
+                  style={{ background: `linear-gradient(90deg, ${cfg.accent}88 0%, transparent 100%)` }}
+                />
 
-                  {/* Icon */}
-                  <div
-                    className="relative z-10 w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: cfg.bg, color: cfg.accent }}
-                  >
-                    {goal.icon}
+                <div className="flex items-center justify-between gap-4 mb-6">
+                  <div>
+                    <span className={`inline-flex text-xs font-bold px-2.5 py-1 rounded-full border ${cfg.color} ${cfg.bg} ${cfg.border}`}>
+                      {sectionLabel}
+                    </span>
+                    <h2 className="mt-3 text-2xl font-black tracking-tight text-foreground">
+                      {sectionLabel}
+                    </h2>
                   </div>
-
-                  {/* Badge */}
-                  <span
-                    className={`relative z-10 inline-flex text-xs font-bold px-2.5 py-1 rounded-full border mb-3 ${cfg.color} ${cfg.bg} ${cfg.border}`}
-                  >
-                    {t.goals.timeframes[goal.timeframe]}
-                  </span>
-
-                  <h3 className="relative z-10 text-base font-bold mb-2 text-foreground leading-snug group-hover:text-primary transition-colors">
-                    {goal.title}
-                  </h3>
-                  <p className="relative z-10 text-sm text-muted-foreground leading-relaxed">
-                    {goal.description}
-                  </p>
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0" style={{ background: cfg.bg, color: cfg.accent }}>
+                    <Target className="w-5 h-5" />
+                  </div>
                 </div>
-              </motion.div>
+
+                <div className="space-y-4">
+                  {section.goals.map((goal, goalIndex) => (
+                    <motion.div
+                      key={`${section.timeframe}-${goalIndex}`}
+                      initial={{ opacity: 0, y: 18 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ delay: goalIndex * 0.08, duration: 0.35, ease: "easeOut" }}
+                      className="group relative overflow-hidden rounded-[1.4rem] border border-border/50 glass-panel card-hover p-5 sm:p-6"
+                      style={{ borderColor: `${cfg.accent}1f` }}
+                    >
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                        style={{ background: `radial-gradient(ellipse at 30% 20%, ${cfg.accent}10 0%, transparent 70%)` }}
+                      />
+
+                      <div className="relative z-10 flex items-start gap-4">
+                        <div
+                          className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+                          style={{ background: cfg.bg, color: cfg.accent }}
+                        >
+                          {goal.icon}
+                        </div>
+
+                        <div className="min-w-0">
+                          <h3 className="text-base font-bold mb-2 text-foreground leading-snug group-hover:text-primary transition-colors">
+                            {goal.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {goal.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
             )
           })}
         </div>
