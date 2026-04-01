@@ -158,13 +158,8 @@ export const translations = {
           timeframe: "Court terme",
         },
         {
-          title: "Évoluer vers un rôle d'ingénieur DevSecOps ou sécurité offensive",
-          description: "Renforcer mon expertise pour intervenir sur des missions à forte valeur ajoutée en sécurité, automatisation et résilience des infrastructures.",
-          timeframe: "Moyen terme",
-        },
-        {
-          title: "Développer des activités numériques en parallèle de mon activité principale",
-          description: "Créer des services et produits digitaux complémentaires pour diversifier mes revenus et renforcer mon autonomie.",
+          title: "Intégrer une entreprise suisse en tant qu'ingénieur DevSecOps ou sécurité offensive",
+          description: "Contribuer à des équipes suisses sur des missions orientées sécurité, industrialisation et automatisation des environnements.",
           timeframe: "Moyen terme",
         },
         {
@@ -173,13 +168,18 @@ export const translations = {
           timeframe: "Moyen terme",
         },
         {
-          title: "Créer des outils open‑source en sécurité automatisée",
-          description: "Développer et publier des outils qui automatisent l'audit, le hardening et la détection de vulnérabilités, et partager ces ressources avec la communauté.",
+          title: "Développer des activités numériques en parallèle de mon activité principale",
+          description: "Créer des services et produits digitaux complémentaires pour diversifier mes revenus et renforcer mon autonomie.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Se lancer en tant que consultant indépendant en cybersécurité & DevSecOps",
+          description: "Construire une activité indépendante durable pour accompagner des clients sur la sécurité, l'automatisation et l'amélioration continue.",
           timeframe: "Long terme",
         },
         {
-          title: "Développer une activité indépendante 100% remote",
-          description: "Structurer une organisation de travail flexible et totalement à distance pour collaborer avec des clients au-delà des frontières.",
+          title: "Créer des outils open‑source en sécurité automatisée",
+          description: "Développer et publier des outils qui automatisent l'audit, le hardening et la détection de vulnérabilités, et partager ces ressources avec la communauté.",
           timeframe: "Long terme",
         },
         {
@@ -422,13 +422,8 @@ export const translations = {
           timeframe: "Court terme",
         },
         {
-          title: "Move into a DevSecOps or offensive security engineer role",
-          description: "Strengthen my expertise to handle high-value missions in security, automation and infrastructure resilience.",
-          timeframe: "Moyen terme",
-        },
-        {
-          title: "Develop digital side activities alongside my main work",
-          description: "Create complementary digital services and products to diversify my income and reinforce my autonomy.",
+          title: "Join a Swiss company as a DevSecOps or offensive security engineer",
+          description: "Contribute to Swiss teams on missions focused on security, industrialization and environment automation.",
           timeframe: "Moyen terme",
         },
         {
@@ -437,13 +432,18 @@ export const translations = {
           timeframe: "Moyen terme",
         },
         {
-          title: "Build open-source automated security tools",
-          description: "Develop and publish tools that automate auditing, hardening and vulnerability detection, and share them with the security community.",
+          title: "Develop digital activities alongside my main work",
+          description: "Create complementary digital services and products to diversify my income and strengthen my autonomy.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Launch as an independent cybersecurity & DevSecOps consultant",
+          description: "Build a sustainable independent activity to help clients with security, automation and continuous improvement.",
           timeframe: "Long terme",
         },
         {
-          title: "Develop an independent 100% remote activity",
-          description: "Structure a flexible, fully remote way of working to collaborate with clients beyond borders.",
+          title: "Build open-source automated security tools",
+          description: "Develop and publish tools that automate auditing, hardening and vulnerability detection, and share them with the security community.",
           timeframe: "Long terme",
         },
         {
