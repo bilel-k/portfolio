@@ -148,28 +148,43 @@ export const translations = {
       } as Record<string, string>,
       items: [
         {
-          title: "Construire une activité freelance indépendante",
-          description: "Développer une offre de services en cybersécurité et DevSecOps pour travailler en autonomie avec des clients variés.",
-          timeframe: "Moyen terme",
-        },
-        {
-          title: "Obtenir CompTIA Security+ et préparer l'OSCP",
-          description: "Valider mes compétences offensives et défensives avec deux certifications internationalement reconnues avant la fin de mon Bachelor.",
+          title: "Obtenir eJPT, CompTIA Security+ et préparer l'OSCP",
+          description: "Valider mes bases offensives et défensives avec des certifications reconnues, puis structurer ma progression vers l'OSCP.",
           timeframe: "Court terme",
         },
         {
-          title: "Intégrer la sécurité dans des pipelines CI/CD réels",
-          description: "Implémenter des pratiques DevSecOps concrètes : SAST, DAST, scan de dépendances et policy-as-code (OPA/Rego) dans des workflows GitHub Actions ou GitLab CI.",
-          timeframe: "Moyen terme",
+          title: "Lancer mon activité freelance en cybersécurité, DevSecOps et développement web en Suisse",
+          description: "Construire une offre indépendante pour accompagner des clients sur la sécurité, l'automatisation et le développement web.",
+          timeframe: "Court terme",
         },
         {
           title: "Évoluer vers un rôle d'ingénieur DevSecOps ou sécurité offensive",
-          description: "Intégrer une équipe DevSecOps, SOC ou red team dans une entreprise technologique internationale, en combinant expertise offensive et automatisation de la sécurité.",
-          timeframe: "Long terme",
+          description: "Renforcer mon expertise pour intervenir sur des missions à forte valeur ajoutée en sécurité, automatisation et résilience des infrastructures.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Développer des activités numériques en parallèle de mon activité principale",
+          description: "Créer des services et produits digitaux complémentaires pour diversifier mes revenus et renforcer mon autonomie.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Décrocher l'OSCP avant la fin du Bachelor",
+          description: "Consolider mes compétences offensives avancées avec une certification exigeante et reconnue dans le domaine du pentest.",
+          timeframe: "Moyen terme",
         },
         {
           title: "Créer des outils open‑source en sécurité automatisée",
           description: "Développer et publier des outils qui automatisent l'audit, le hardening et la détection de vulnérabilités, et partager ces ressources avec la communauté.",
+          timeframe: "Long terme",
+        },
+        {
+          title: "Développer une activité indépendante 100% remote",
+          description: "Structurer une organisation de travail flexible et totalement à distance pour collaborer avec des clients au-delà des frontières.",
+          timeframe: "Long terme",
+        },
+        {
+          title: "Obtenir un Master en cybersécurité ou DevSecOps",
+          description: "Approfondir mes connaissances en gouvernance SSI, cryptographie appliquée, sécurité des architectures cloud et gestion des risques au niveau d'un Master spécialisé.",
           timeframe: "Long terme",
         },
       ],
@@ -397,28 +412,43 @@ export const translations = {
       } as Record<string, string>,
       items: [
         {
-          title: "Build an independent freelance business",
-          description: "Develop cybersecurity and DevSecOps services to work autonomously with a variety of clients.",
-          timeframe: "Moyen terme",
-        },
-        {
-          title: "Obtain CompTIA Security+ and prepare for OSCP",
-          description: "Validate my offensive and defensive skills with two internationally recognized certifications before the end of my Bachelor's degree.",
+          title: "Obtain eJPT, CompTIA Security+ and prepare for OSCP",
+          description: "Validate my offensive and defensive foundations with recognized certifications, then structure my path toward OSCP.",
           timeframe: "Court terme",
         },
         {
-          title: "Embed security into real CI/CD pipelines",
-          description: "Implement concrete DevSecOps practices: SAST, DAST, dependency scanning and policy-as-code (OPA/Rego) in GitHub Actions or GitLab CI workflows.",
-          timeframe: "Moyen terme",
+          title: "Launch my freelance activity in cybersecurity, DevSecOps and web development in Switzerland",
+          description: "Build an independent offer to support clients on security, automation and web development.",
+          timeframe: "Court terme",
         },
         {
           title: "Move into a DevSecOps or offensive security engineer role",
-          description: "Join a DevSecOps, SOC or red team at an international technology company, combining offensive expertise with security automation.",
+          description: "Strengthen my expertise to handle high-value missions in security, automation and infrastructure resilience.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Develop digital side activities alongside my main work",
+          description: "Create complementary digital services and products to diversify my income and reinforce my autonomy.",
+          timeframe: "Moyen terme",
+        },
+        {
+          title: "Earn the OSCP before the end of my Bachelor's degree",
+          description: "Consolidate advanced offensive skills with a demanding certification recognized in penetration testing.",
           timeframe: "Moyen terme",
         },
         {
           title: "Build open-source automated security tools",
           description: "Develop and publish tools that automate auditing, hardening and vulnerability detection, and share them with the security community.",
+          timeframe: "Long terme",
+        },
+        {
+          title: "Develop an independent 100% remote activity",
+          description: "Structure a flexible, fully remote way of working to collaborate with clients beyond borders.",
+          timeframe: "Long terme",
+        },
+        {
+          title: "Obtain a Master's in cybersecurity or DevSecOps",
+          description: "Deepen my knowledge in ISS governance, applied cryptography, cloud security architecture and risk management at a specialized Master's level.",
           timeframe: "Long terme",
         },
       ],

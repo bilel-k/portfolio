@@ -2,7 +2,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Target, Rocket, Shield, GraduationCap, Code2, Crosshair } from "lucide-react"
+import { Target, Rocket, Shield, Briefcase, Code2, Crosshair, Wrench, Globe, GraduationCap } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export default function Goals() {
@@ -10,10 +10,13 @@ export default function Goals() {
 
   const goalIcons = [
     <Shield key={0} className="w-6 h-6" />,
-    <Crosshair key={1} className="w-6 h-6" />,
+    <Briefcase key={1} className="w-6 h-6" />,
     <Rocket key={2} className="w-6 h-6" />,
-    <GraduationCap key={3} className="w-6 h-6" />,
-    <Code2 key={4} className="w-6 h-6" />,
+    <Code2 key={3} className="w-6 h-6" />,
+    <Crosshair key={4} className="w-6 h-6" />,
+    <Wrench key={5} className="w-6 h-6" />,
+    <Globe key={6} className="w-6 h-6" />,
+    <GraduationCap key={7} className="w-6 h-6" />,
   ]
 
   const goals = t.goals.items.map((item, i) => ({ ...item, icon: goalIcons[i] }))
