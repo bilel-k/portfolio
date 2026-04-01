@@ -140,13 +140,18 @@ export const translations = {
     },
     goals: {
       title: "Mes objectifs",
-      subtitle: "Ce vers quoi je travaille pour construire mon avenir professionnel.",
+      subtitle: "Mon objectif principal est de devenir indépendant, d'entreprendre en autonomie et de travailler en freelance.",
       timeframes: {
         "Court terme": "Court terme",
         "Moyen terme": "Moyen terme",
         "Long terme": "Long terme",
       } as Record<string, string>,
       items: [
+        {
+          title: "Construire une activité freelance indépendante",
+          description: "Développer une offre de services en cybersécurité et DevSecOps pour travailler en autonomie avec des clients variés.",
+          timeframe: "Moyen terme",
+        },
         {
           title: "Obtenir CompTIA Security+ et préparer l'OSCP",
           description: "Valider mes compétences offensives et défensives avec deux certifications internationalement reconnues avant la fin de mon Bachelor.",
@@ -155,16 +160,11 @@ export const translations = {
         {
           title: "Intégrer la sécurité dans des pipelines CI/CD réels",
           description: "Implémenter des pratiques DevSecOps concrètes : SAST, DAST, scan de dépendances et policy-as-code (OPA/Rego) dans des workflows GitHub Actions ou GitLab CI.",
-          timeframe: "Court terme",
+          timeframe: "Moyen terme",
         },
         {
           title: "Évoluer vers un rôle d'ingénieur DevSecOps ou sécurité offensive",
           description: "Intégrer une équipe DevSecOps, SOC ou red team dans une entreprise technologique internationale, en combinant expertise offensive et automatisation de la sécurité.",
-          timeframe: "Moyen terme",
-        },
-        {
-          title: "Obtenir un Master en cybersécurité ou DevSecOps",
-          description: "Approfondir mes connaissances en gouvernance SSI, cryptographie appliquée, sécurité des architectures cloud et gestion des risques au niveau d'un Master spécialisé.",
           timeframe: "Long terme",
         },
         {
@@ -389,13 +389,18 @@ export const translations = {
     },
     goals: {
       title: "My goals",
-      subtitle: "What I'm working towards to build my professional future.",
+      subtitle: "My main goal is to become independent, build autonomously and work as a freelancer.",
       timeframes: {
         "Court terme": "Short term",
         "Moyen terme": "Medium term",
         "Long terme": "Long term",
       } as Record<string, string>,
       items: [
+        {
+          title: "Build an independent freelance business",
+          description: "Develop cybersecurity and DevSecOps services to work autonomously with a variety of clients.",
+          timeframe: "Moyen terme",
+        },
         {
           title: "Obtain CompTIA Security+ and prepare for OSCP",
           description: "Validate my offensive and defensive skills with two internationally recognized certifications before the end of my Bachelor's degree.",
@@ -404,17 +409,12 @@ export const translations = {
         {
           title: "Embed security into real CI/CD pipelines",
           description: "Implement concrete DevSecOps practices: SAST, DAST, dependency scanning and policy-as-code (OPA/Rego) in GitHub Actions or GitLab CI workflows.",
-          timeframe: "Court terme",
+          timeframe: "Moyen terme",
         },
         {
           title: "Move into a DevSecOps or offensive security engineer role",
           description: "Join a DevSecOps, SOC or red team at an international technology company, combining offensive expertise with security automation.",
           timeframe: "Moyen terme",
-        },
-        {
-          title: "Obtain a Master's in cybersecurity or DevSecOps",
-          description: "Deepen my knowledge in ISS governance, applied cryptography, cloud security architecture and risk management at a specialized Master's level.",
-          timeframe: "Long terme",
         },
         {
           title: "Build open-source automated security tools",
